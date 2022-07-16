@@ -40,23 +40,40 @@ const mediumArray = getSizedArray(1000);
 const largeArray = getSizedArray(10000);
 const extraLargeArray = getSizedArray(100000);
 
+// let arrayOfArrays = [tinyArray, smallArray,mediumArray,largeArray,extraLargeArray]
+// console.log(arrayOfArrays);
+// function runTimer (array){
 
-
+//     for(i=0; i=arrayOfArrays.length; i++){
+//         perf.start();
+//         doublerAppend(arrayOfArrays[i]);
+//         let resultsAppend = perf.stop();
+//         console.log('Results for the', arrayOfArrays);
+//         console.log("insert", resultsInsert.preciseWords);
+//         console.log("append", resultsAppend.preciseWords);
+//         doublerInsert(arrayOfArrays[i])
+//     }
+// }
 // How long does it take to double every number in a given 
 // array? 
 
 // Try it with first function
 perf.start();                     // Starts timer
-doublerAppend(extraLargeArray);
+doublerAppend(smallArray);
 let resultsAppend = perf.stop();  // Stops timer and save time results
 
 
 // Try it with second function
 perf.start();
-doublerInsert(extraLargeArray);
+doublerInsert(smallArray)
 let resultsInsert = perf.stop();
 
 
-console.log('Results for the extraLargeArray');
+
+console.log('Results for the smallArray');
+
+
 console.log("insert", resultsInsert.preciseWords);
 console.log("append", resultsAppend.preciseWords);
+
+
